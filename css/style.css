@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', cursive;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: #ffffff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* 🌸 BACKGROUND GRADIENT PINK */
+    background: radial-gradient(
+        ellipse at top,
+        #ffd1dc 0%,
+        #ff9eb5 40%,
+        #800020 100%
+    );
+    overflow-x: hidden;
+}
+
+/* ===== GREETINGS ===== */
+.greetings {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;              /* Jarak antara baris atas dan bawah */
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.greetings-row {
+    display: flex;
+    justify-content: center; /* Membuat teks berkumpul rapi di tengah */
+    gap: 25px;               /* Spasi horizontal antar kata yang pas */
+    flex-wrap: wrap;         
+}
+
+.word {
+    display: flex;
+    justify-content: center;
+}
+
+/* 🔥 GLOW MAROON */
+.greetings span{
+    animation: glow 2.8s ease-in-out infinite;
+}
+
+@keyframes glow{
+    0%, 100%{
+        color: #ffffff;
+        text-shadow:
+            0 0 8px #800020,
+            0 0 20px #800020,
+            0 0 45px #800020;
+    }
+    50%{
+        color: #800020;
+        text-shadow: none;
+    }
+}
+
+/* ===== ANIMATION DELAY (FIXED TOTAL) ===== */
+
+/* --- BARIS 1 --- */
+/* Word 1: R-E-S-Y-A */
+.greetings-row:nth-child(1) .word:nth-child(1) span:nth-child(1){ animation-delay: 0s; }
+.greetings-row:nth-child(1) .word:nth-child(1) span:nth-child(2){ animation-delay: .2s; }
+.greetings-row:nth-child(1) .word:nth-child(1) span:nth-child(3){ animation-delay: .4s; }
+.greetings-row:nth-child(1) .word:nth-child(1) span:nth-child(4){ animation-delay: .6s; }
+.greetings-row:nth-child(1) .word:nth-child(1) span:nth-child(5){ animation-delay: .8s; }
+
+/* Word 2: S-E-K-A-R (Efek Mundur) */
+.greetings-row:nth-child(1) .word:nth-child(2) span:nth-child(5){ animation-delay: 0s; }
+.greetings-row:nth-child(1) .word:nth-child(2) span:nth-child(4){ animation-delay: .2s; }
+.greetings-row:nth-child(1) .word:nth-child(2) span:nth-child(3){ animation-delay: .4s; }
+.greetings-row:nth-child(1) .word:nth-child(2) span:nth-child(2){ animation-delay: .6s; }
+.greetings-row:nth-child(1) .word:nth-child(2) span:nth-child(1){ animation-delay: .8s; }
+
+
+/* --- BARIS 2 --- */
+/* Word 3: K-E-D-H-A-T-O-N */
+.greetings-row:nth-child(2) .word:nth-child(1) span:nth-child(1){ animation-delay: 0s; }
+.greetings-row:nth-child(2) .word:nth-child(1) span:nth-child(2){ animation-delay: .2s; }
+.greetings-row:nth-child(2) .word:nth-child(1) span:nth-child(3){ animation-delay: .4s; }
+.greetings-row:nth-child(2) .word:nth-child(1) span:nth-child(4){ animation-delay: .6s; }
+.greetings-row:nth-child(2) .word:nth-child(1) span:nth-child(5){ animation-delay: .8s; }
+.greetings-row:nth-child(2) .word:nth-child(1) span:nth-child(6){ animation-delay: 1s; }
+.greetings-row:nth-child(2) .word:nth-child(1) span:nth-child(7){ animation-delay: 1.2s; }
+.greetings-row:nth-child(2) .word:nth-child(1) span:nth-child(8){ animation-delay: 1.4s; }
+
+/* Word 4: N-U-R-Y-A-N (Efek Mundur) */
+.greetings-row:nth-child(2) .word:nth-child(2) span:nth-child(6){ animation-delay: 0s; }
+.greetings-row:nth-child(2) .word:nth-child(2) span:nth-child(5){ animation-delay: .2s; }
+.greetings-row:nth-child(2) .word:nth-child(2) span:nth-child(4){ animation-delay: .4s; }
+.greetings-row:nth-child(2) .word:nth-child(2) span:nth-child(3){ animation-delay: .6s; }
+.greetings-row:nth-child(2) .word:nth-child(2) span:nth-child(2){ animation-delay: .8s; }
+.greetings-row:nth-child(2) .word:nth-child(2) span:nth-child(1){ animation-delay: 1s; }
+
+
+/* ===== DESCRIPTION ===== */
+.description{
+    font-size: 1.2rem;
+    max-width: 650px;
+    margin-bottom: 35px;
+    text-align: center;    
+    line-height: 1.6;      
+    color: #fff0f4;
+    padding: 0 20px;
+}
+
+/* ===== BUTTON ===== */
+.button{
+    display: flex;
+    justify-content: center;
+}
+
+.button button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.button a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #800020;
+    background: #ffffff;
+    padding: 14px 32px;
+    border: 2px solid #800020;
+    border-radius: 50px;   
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.button a:hover{
+    background: #800020;
+    color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 158, 181, 0.6);
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width:600px){
+    .greetings{
+        font-size: 2rem;    
+        gap: 10px;
+    }
+
+    .greetings-row {
+        gap: 15px;          
+    }
+
+    .description{
+        font-size: 1rem;
+        padding: 0 25px;
+    }
+
+    .button a{
+        font-size: 0.95rem;
+        padding: 12px 26px;
+    }
+}
